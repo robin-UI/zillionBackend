@@ -84,7 +84,7 @@ router.get('/getallproducts', async function (req, res) {
 /* POST Create Categor */
 router.post('/createCategories', async function (req, res) {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         let isCategory = await Category.findOne({ category: req.body.category })
 
         if (isCategory) {
@@ -104,22 +104,23 @@ router.post('/createCategories', async function (req, res) {
 
     } catch (error) {
         console.log(error);
-    }
+    } 
 })
 
 /* GET Show all Category */
 router.get('/getallcategory', async function (req, res) {
-    try {
+    // try {
         let category = await Category.find();
-
+        console.log("hiii");
+        console.log(category);
         if (!category) {
             return res.status(400).json({ state: false, message: "could not find any category" })
         }
 
         res.status(200).json({ state: true, message: category })
-    } catch (error) {
+    // } catch (error) {
 
-    }
+    // }
 })
 
 router.get('/getuserDetails/:id', async function (req, res) {

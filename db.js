@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-// const mongoURL = "mongodb://localhost:27017/e-commerce" 
-const mongoURL = "mongodb+srv://robinme1971:robinme1971@cluster0.aazgtek.mongodb.net/zillion?retryWrites=true&w=majority"
+const mongoURL = "mongodb://localhost:27017/e-commerce" 
+// const mongoURL = "mongodb+srv://robinme1971:robinme1971@cluster0.aazgtek.mongodb.net/zillion?retryWrites=true&w=majority"
 
 //Function to connect mongodb server
 const connectedToMongo = () => {
